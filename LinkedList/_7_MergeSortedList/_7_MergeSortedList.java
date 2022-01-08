@@ -1,9 +1,5 @@
 package LinkedList._7_MergeSortedList;
 
-import Strings._3_ValidPalindrome;
-
-import java.util.List;
-
 class ListNode {
     int val;
     ListNode next;

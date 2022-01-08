@@ -1,6 +1,6 @@
 package LinkedList._3_Binary;
 
-import java.util.ArrayList;
+// import java.util.ArrayList;
 
 class ListNode {
     int val;
