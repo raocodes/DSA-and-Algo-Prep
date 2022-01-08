@@ -1,4 +1,4 @@
-package LinkedList._1_DeleteNode;
+package Easy.LinkedList._1_DeleteNode;
 
 class ListNode {
     int val;

@@ -1,4 +1,4 @@
-package LinkedList._7_MergeSortedList;
+package Easy.LinkedList._7_MergeSortedList;
 
 class ListNode {
     int val;
@@ -19,8 +19,10 @@ class ListNode {
 
 public class _7_MergeSortedList {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
-        if (list1 == null) return list2;
-        if (list2 == null) return list1;
+        if (list1 == null)
+            return list2;
+        if (list2 == null)
+            return list1;
 
         ListNode newhead = new ListNode();
         ListNode currnew = newhead;

@@ -1,4 +1,4 @@
-package LinkedList._2_Middle;
+package Easy.LinkedList._2_Middle;
 
 import java.util.List;
 import java.util.ArrayList;
@@ -30,7 +30,3 @@ public class _2_Middle {
         return vals.get(vals.size() / 2);
     }
 }
-
-
-
-

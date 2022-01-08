@@ -1,4 +1,4 @@
-package Strings;
+package Easy.Strings;
 
 public class _3_ValidPalindrome {
     public boolean isPalindrome(String s) {
@@ -17,7 +17,8 @@ public class _3_ValidPalindrome {
         tochecktwo.append(s);
         for (int beg = 0, last = s.length() - 1; beg < last; beg++, last--) {
             if (s.charAt(beg) != s.charAt(last)) {
-                return isPalindrome(tocheckone.deleteCharAt(beg).toString()) || isPalindrome(tochecktwo.deleteCharAt(last).toString());
+                return isPalindrome(tocheckone.deleteCharAt(beg).toString())
+                        || isPalindrome(tochecktwo.deleteCharAt(last).toString());
             }
         }
         return true;

@@ -1,4 +1,4 @@
-package Strings;
+package Easy.Strings;
 
 public class _2_LongestCommonPrefix {
     public String longestCommonPrefix(String[] strs) {
@@ -18,10 +18,9 @@ public class _2_LongestCommonPrefix {
     }
 }
 
-
 class testlongest {
     public static void main(String[] args) {
         _2_LongestCommonPrefix obj = new _2_LongestCommonPrefix();
-        System.out.println(obj.longestCommonPrefix(new String[]{"flower", "flow", "flight"}));
+        System.out.println(obj.longestCommonPrefix(new String[] { "flower", "flow", "flight" }));
     }
 }

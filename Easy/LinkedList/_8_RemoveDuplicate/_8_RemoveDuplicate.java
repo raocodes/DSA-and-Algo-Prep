@@ -1,4 +1,4 @@
-package LinkedList._8_RemoveDuplicate;
+package Easy.LinkedList._8_RemoveDuplicate;
 
 class ListNode {
     int val;

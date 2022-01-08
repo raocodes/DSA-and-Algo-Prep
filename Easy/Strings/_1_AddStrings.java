@@ -1,4 +1,4 @@
-package Strings;
+package Easy.Strings;
 
 public class _1_AddStrings {
     public String addStrings(String num1, String num2) {

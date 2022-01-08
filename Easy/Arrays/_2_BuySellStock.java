@@ -1,4 +1,4 @@
-package Arrays;
+package Easy.Arrays;
 
 public class _2_BuySellStock {
     public int maxProfit(int[] prices) {
