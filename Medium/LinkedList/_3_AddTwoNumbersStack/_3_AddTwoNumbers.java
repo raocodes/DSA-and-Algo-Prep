@@ -75,7 +75,7 @@ public class _3_AddTwoNumbers {
             newlist.get(curr).val = sum;
             curr--;
         }
-        if(head.val == 0){
+        if (head.val == 0) {
             head = head.next;
         }
         return head;
