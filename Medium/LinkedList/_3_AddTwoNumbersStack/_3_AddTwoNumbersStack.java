@@ -20,7 +20,7 @@ class ListNode {
     }
 }
 
-public class _3_AddTwoNumbers {
+public class _3_AddTwoNumbersStack {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode temp;
         Stack<Integer> listone = new Stack<Integer>();
