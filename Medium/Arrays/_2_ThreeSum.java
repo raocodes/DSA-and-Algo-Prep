@@ -6,6 +6,8 @@ import java.util.List;
 
 public class _2_ThreeSum {
     public List<List<Integer>> threeSum(int[] nums) {
+        // We use a 3 pointer approach
+
         // We sort the array so that we can follow a three pointer solution
         Arrays.sort(nums);
 

@@ -2,6 +2,8 @@ package Medium.Arrays;
 
 public class _8_ContainerMostWater {
     public int maxArea(int[] height) {
+        // We use a 2 pointer approach
+
         int left = 0;
         int right = height.length - 1;
         int maxarea = 0;
