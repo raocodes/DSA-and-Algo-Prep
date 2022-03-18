@@ -3,6 +3,7 @@ package GFG.Stack;
 import java.util.Stack;
 
 public class _1_NextLargestElement {
+    // NEAREST GREATER TO RIGHT
     // Function to find the next greater element for each element of the array.
     public static long[] nextLargerElement(long[] arr, int n) {
         Stack<Long> stk = new Stack<>();
