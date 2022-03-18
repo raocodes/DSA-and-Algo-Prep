@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class _2_SmallestNumberOnLeft {
+    // NEAREST GREATER TO LEFT
     static List<Integer> leftSmaller(int n, int a[]) {
         Stack<Integer> stk = new Stack<>();
         List<Integer> result = new ArrayList<>();
