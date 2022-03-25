@@ -1,4 +1,4 @@
-# LeetCode
-Repo full of my solutions for the 250 question sheet
+# DSA and Algo Prep
+Repo full of my DSA and Algo prep
 
 All the solutions are in Java.
