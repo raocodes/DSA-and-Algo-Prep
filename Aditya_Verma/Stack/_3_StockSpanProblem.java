@@ -1,4 +1,4 @@
-package GFG.Stack;
+package Stack;
 
 import java.util.Stack;
 
