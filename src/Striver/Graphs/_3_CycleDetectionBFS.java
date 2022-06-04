@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Queue;
 
 public class _3_CycleDetectionBFS {
-    public static boolean checkCyclebfs(int V, List<List<Integer>> adj) {
+    public static boolean checkCycleBfs(int V, List<List<Integer>> adj) {
         boolean[] vis = new boolean[V + 1];
 
         for (int i = 1; i <= V; i++) {
@@ -34,7 +34,6 @@ public class _3_CycleDetectionBFS {
         }
         return false;
     }
-
 
     public static void main(String[] args) {
         int n = 11;
@@ -78,6 +77,6 @@ public class _3_CycleDetectionBFS {
 
         adj.get(11).add(8);
 
-        System.out.println("Is it a cycle: " + checkCyclebfs(n ,adj));
+        System.out.println("Is it a cycle: " + checkCycleBfs(n, adj));
     }
 }
