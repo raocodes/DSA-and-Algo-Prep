@@ -36,13 +36,12 @@ public class _5_CheckBipartiteBFS {
     }
 
     public static void main(String[] args) {
-        int n = 11;
+        int n = 8;
 
         List<List<Integer>> adj = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-
 
         adj.get(1).add(2);
 
