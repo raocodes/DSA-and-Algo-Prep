@@ -1,4 +1,4 @@
-package Striver.Graphs;
+package Graphs_Striver;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
