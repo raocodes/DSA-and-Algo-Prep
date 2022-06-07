@@ -1,4 +1,4 @@
-package Aditya_Verma.Stack;
+package Stack_AV;
 
 public class _6_TrappingRainWater {
     static long trappingWater(int arr[], int n) {
