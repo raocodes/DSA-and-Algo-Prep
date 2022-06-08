@@ -2,17 +2,28 @@ package BinarySearch_AV;
 
 import java.util.ArrayList;
 
+// https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/#
 public class _3_FirstAndLastOccurrence {
     public ArrayList<Integer> firstAndLast(int arr[], int n, int x) {
-        int start = 0;
-        int end = n - 1;
+        int ogstart = 0;
+        int ogend = n - 1;
         int res = -1;
 
         ArrayList<Integer> result = new ArrayList<>();
 
+        int mid = ogstart + ((ogend - ogstart) / 2);
+        if (arr[mid] == x) res = mid;
+        else if (x < arr[mid]) {
+            ogend = mid - 1;
+        } else {
+            ogstart = mid + 1;
+        }
+
         // First occurrence
+        int start = ogstart;
+        int end = ogend;
         while (start <= end) {
-            int mid = start + ((end - start) / 2);
+            mid = start + ((end - start) / 2);
             if (arr[mid] == x) {
                 res = mid;
                 end = mid - 1;
@@ -24,13 +35,12 @@ public class _3_FirstAndLastOccurrence {
         }
         result.add(res);
 
-        res = -1;
-        start = 0;
-        end = n - 1;
-
         // Last occurrence
+        res = -1;
+        start = ogstart;
+        end = ogend;
         while (start <= end) {
-            int mid = start + ((end - start) / 2);
+            mid = start + ((end - start) / 2);
             if (arr[mid] == x) {
                 res = mid;
                 start = mid + 1;
