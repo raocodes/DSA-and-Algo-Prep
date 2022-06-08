@@ -1,6 +1,6 @@
 package BinarySearch_AV;
 
-public class NumberOfRotations {
+public class _5_NumberOfRotations {
     int findKRotation(int arr[], int n) {
         int low = 0;
         int high = n - 1;
