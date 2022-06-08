@@ -1,5 +1,6 @@
 package BinarySearch_AV;
 
+// https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1/
 public class _4_NumberOfOccurrences {
     int count(int arr[], int n, int x) {
         int ogstart = 0;
@@ -30,7 +31,6 @@ public class _4_NumberOfOccurrences {
         }
 
         // Last occurrence
-
         start = ogstart;
         end = ogend;
         while (start <= end) {
