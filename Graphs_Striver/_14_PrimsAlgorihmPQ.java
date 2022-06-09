@@ -19,7 +19,7 @@ public class _14_PrimsAlgorihmPQ {
             parent[i] = -1;
         }
 
-        Comparator<Pair> paircompare = (o1, o2) -> {
+        Comparator<Pair> paircompare = (Pair o1, Pair o2) -> {
             if (o1.getWeight() < o2.getWeight())
                 return -1;
             else if (o1.getWeight() > o2.getWeight())
