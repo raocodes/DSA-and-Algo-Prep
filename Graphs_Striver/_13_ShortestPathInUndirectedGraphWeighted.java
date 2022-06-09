@@ -15,7 +15,7 @@ public class _13_ShortestPathInUndirectedGraphWeighted {
         }
 
         // Creating a comparator using lambdas for the priority queue
-        Comparator<Pair> paircomparator = (o1, o2) -> {
+        Comparator<Pair> paircomparator = (Pair o1, Pair o2) -> {
             if (o1.getWeight() < o2.getWeight()) {
                 return -1;
             }
