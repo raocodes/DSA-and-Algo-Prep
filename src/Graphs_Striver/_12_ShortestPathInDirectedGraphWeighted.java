@@ -4,25 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-// Created a pair object because this is a weighted graph
-class Pair {
-    private int node;
-    private int weight;
-
-    public Pair(int node, int weight) {
-        this.node = node;
-        this.weight = weight;
-    }
-
-    public int getNode() {
-        return node;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-}
-
 // This example starts with 0
 public class _12_ShortestPathInDirectedGraphWeighted {
     // We can use dfs or bfs to make the topo sort
@@ -86,7 +67,7 @@ public class _12_ShortestPathInDirectedGraphWeighted {
 
     public static void main(String[] args) {
         int n = 6;
-        int srcnode = 5;
+        int srcnode = 0;
 
         List<List<Pair>> adj = new ArrayList<>();
         for (int i = 0; i < n; i++) {

@@ -1,58 +1,41 @@
 package Graphs_Striver;
 
-import java.util.*;
-
-// Created a PairComp object because this is a weighted graph
-class PairComp implements Comparator<PairComp> {
-    private int node;
-    private int weight;
-
-    public PairComp(int node, int weight) {
-        this.node = node;
-        this.weight = weight;
-    }
-
-    public PairComp() {
-    }
-
-    public int getNode() {
-        return node;
-    }
-
-    public int getWeight() {
-        return weight;
-    }
-
-    public int compare(PairComp o1, PairComp o2) {
-        if (o1.getWeight() < o2.getWeight()) {
-            return -1;
-        }
-        if (o1.getWeight() > o2.getWeight()) {
-            return 1;
-        }
-        return 0;
-    }
-}
+import java.util.List;
+import java.util.Comparator;
+import java.util.Queue;
+import java.util.PriorityQueue;
+import java.util.ArrayList;
 
 // This is Dijkstra's Algorithm
 public class _13_ShortestPathInUndirectedGraphWeighted {
-    public static void printShortestPathDijkstra(int V, List<List<PairComp>> adj, int srcnode) {
+    public static void printShortestPathDijkstra(int V, List<List<Pair>> adj, int srcnode) {
         int[] dist = new int[V + 1];
         for (int i = 0; i <= V; i++) {
             dist[i] = Integer.MAX_VALUE;
         }
 
-        Queue<PairComp> q = new PriorityQueue<>(new PairComp());
-        q.add(new PairComp(srcnode, 0));
+        // Creating a comparator using lambdas for the priority queue
+        Comparator<Pair> paircomparator = (o1, o2) -> {
+            if (o1.getWeight() < o2.getWeight()) {
+                return -1;
+            }
+            if (o1.getWeight() > o2.getWeight()) {
+                return 1;
+            }
+            return 0;
+        };
+
+        Queue<Pair> q = new PriorityQueue<>(paircomparator);
+        q.add(new Pair(srcnode, 0));
         dist[srcnode] = 0;
 
         while (!q.isEmpty()) {
-            PairComp node = q.poll();
+            Pair node = q.poll();
 
-            for (PairComp iadj : adj.get(node.getNode())) {
+            for (Pair iadj : adj.get(node.getNode())) {
                 if (dist[node.getNode()] + iadj.getWeight() < dist[iadj.getNode()]) {
                     dist[iadj.getNode()] = node.getWeight() + iadj.getWeight();
-                    q.add(new PairComp(iadj.getNode(), dist[iadj.getNode()]));
+                    q.add(new Pair(iadj.getNode(), dist[iadj.getNode()]));
                 }
             }
         }
@@ -71,27 +54,27 @@ public class _13_ShortestPathInUndirectedGraphWeighted {
         int n = 5;
         int srcnode = 1;
 
-        List<List<PairComp>> adj = new ArrayList<>();
+        List<List<Pair>> adj = new ArrayList<>();
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
 
-        adj.get(1).add(new PairComp(2, 2));
-        adj.get(1).add(new PairComp(4, 1));
+        adj.get(1).add(new Pair(2, 2));
+        adj.get(1).add(new Pair(4, 1));
 
-        adj.get(2).add(new PairComp(1, 2));
-        adj.get(2).add(new PairComp(5, 5));
-        adj.get(2).add(new PairComp(3, 4));
+        adj.get(2).add(new Pair(1, 2));
+        adj.get(2).add(new Pair(5, 5));
+        adj.get(2).add(new Pair(3, 4));
 
-        adj.get(3).add(new PairComp(2, 4));
-        adj.get(3).add(new PairComp(4, 3));
-        adj.get(3).add(new PairComp(5, 1));
+        adj.get(3).add(new Pair(2, 4));
+        adj.get(3).add(new Pair(4, 3));
+        adj.get(3).add(new Pair(5, 1));
 
-        adj.get(4).add(new PairComp(1, 1));
-        adj.get(4).add(new PairComp(3, 3));
+        adj.get(4).add(new Pair(1, 1));
+        adj.get(4).add(new Pair(3, 3));
 
-        adj.get(5).add(new PairComp(2, 5));
-        adj.get(5).add(new PairComp(3, 1));
+        adj.get(5).add(new Pair(2, 5));
+        adj.get(5).add(new Pair(3, 1));
 
         printShortestPathDijkstra(n, adj, srcnode);
     }
