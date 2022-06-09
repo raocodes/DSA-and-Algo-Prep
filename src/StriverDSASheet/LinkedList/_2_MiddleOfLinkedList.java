@@ -21,4 +21,21 @@ public class _2_MiddleOfLinkedList {
 
         return list.get(mid);
     }
+
+    // COOLER solution
+    public ListNode middleNodeFastSlow(ListNode head) {
+        if (head == null) {
+            return null;
+        }
+
+        ListNode slow = head;
+        ListNode fast = head;
+
+        while (fast != null && fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+
+        return slow;
+    }
 }
