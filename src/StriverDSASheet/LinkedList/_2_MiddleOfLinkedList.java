@@ -32,6 +32,8 @@ public class _2_MiddleOfLinkedList {
         ListNode fast = head;
 
         while (fast != null && fast.next != null) {
+            // fast != null for even length
+            // fast.next != null for odd length
             slow = slow.next;
             fast = fast.next.next;
         }
