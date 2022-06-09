@@ -31,4 +31,21 @@ public class _3_MergeTwoSortedLists {
 
         return res;
     }
+
+    // Additional question: https://leetcode.com/problems/merge-k-sorted-lists/
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0) {
+            return null;
+        }
+        if (lists[0] == null && lists.length == 1) {
+            return null;
+        }
+
+        ListNode res = lists[0];
+        for (int i = 1; i < lists.length; i++) {
+            res = mergeTwoLists(res, lists[i]);
+        }
+
+        return res;
+    }
 }
