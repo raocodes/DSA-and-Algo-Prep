@@ -1,6 +1,7 @@
 package StriverDSASheet.LinkedList;
 
 public class _3_MergeTwoSortedLists {
+    // In interviews we can say the inefficient approach first which is to create a new list all together
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
         // We will make it in place to reduce space complexity
         if (list1 == null) return list2;

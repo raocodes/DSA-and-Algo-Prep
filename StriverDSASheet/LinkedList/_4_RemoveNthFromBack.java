@@ -1,6 +1,7 @@
 package StriverDSASheet.LinkedList;
 
 public class _4_RemoveNthFromBack {
+    // Inefficient approach would be to find the entire length of the linkedlist first
     public ListNode removeNthFromEnd(ListNode head, int n) {
         ListNode fast, slow;
         fast = slow = head;
