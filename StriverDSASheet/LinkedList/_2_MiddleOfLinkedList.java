@@ -22,7 +22,7 @@ public class _2_MiddleOfLinkedList {
         return list.get(mid);
     }
 
-    // COOLER solution
+    // Faster solution with a fast and slow pointer approach
     public ListNode middleNodeFastSlow(ListNode head) {
         if (head == null) {
             return null;
