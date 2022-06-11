@@ -34,6 +34,8 @@ public class _14_PrimsAlgorithmBrute {
                 }
             }
 
+            mst[smallindex] = true;
+
             for (Pair iadj : adj.get(smallindex)) {
                 if (mst[iadj.getNode()] == false && iadj.getWeight() < key[iadj.getNode()]) {
                     key[iadj.getNode()] = iadj.getWeight(); // Change key value as it is lower
