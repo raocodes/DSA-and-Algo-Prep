@@ -6,7 +6,7 @@ import java.util.Comparator;
 import java.util.Queue;
 import java.util.PriorityQueue;
 
-public class _14_PrimsAlgorihmPQ {
+public class _14_PrimsAlgorithmPQ {
     public static void primsAlgo(int V, List<List<Pair>> adj) {
         int[] key = new int[V];
         boolean[] mst = new boolean[V];
