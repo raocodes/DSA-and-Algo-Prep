@@ -34,6 +34,7 @@ public class _14_PrimsAlgorihmPQ {
 
         while (!pq.isEmpty()) {
             Pair node = pq.poll();
+            mst[node.getNode()] = true;
 
             for (Pair iadj : adj.get(node.getNode())) {
                 if (mst[iadj.getNode()] == false && iadj.getWeight() < key[iadj.getNode()]) {
