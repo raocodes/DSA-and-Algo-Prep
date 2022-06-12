@@ -1,4 +1,4 @@
-package BinarySearch_AV;
+package binarysearch_av;
 
 // https://leetcode.com/problems/search-in-rotated-sorted-array/submissions/
 // https://leetcode.com/problems/search-in-rotated-sorted-array-ii/submissions/

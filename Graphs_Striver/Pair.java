@@ -1,4 +1,4 @@
-package Graphs_Striver;
+package graphs_striver;
 
 public class Pair {
     private int node;

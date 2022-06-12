@@ -1,4 +1,4 @@
-package BinarySearch_AV;
+package binarysearch_av;
 
 // https://practice.geeksforgeeks.org/problems/rotation4723/1/
 public class _5_NumberOfRotations {

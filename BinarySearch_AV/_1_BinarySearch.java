@@ -1,4 +1,4 @@
-package BinarySearch_AV;
+package binarysearch_av;
 
 // https://practice.geeksforgeeks.org/problems/binary-search/1
 public class _1_BinarySearch {

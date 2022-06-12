@@ -1,4 +1,4 @@
-package Others.InterviewBit.LinkedList;
+package others.interviewbit.linkedlist;
 
 public class ListNode {
     int val;

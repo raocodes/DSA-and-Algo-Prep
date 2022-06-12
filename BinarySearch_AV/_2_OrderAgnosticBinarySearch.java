@@ -1,4 +1,4 @@
-package BinarySearch_AV;
+package binarysearch_av;
 
 public class _2_OrderAgnosticBinarySearch {
     int binarysearch(int arr[], int n, int k) {

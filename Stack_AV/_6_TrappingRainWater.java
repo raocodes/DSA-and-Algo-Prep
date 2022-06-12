@@ -1,4 +1,4 @@
-package Stack_AV;
+package stack_av;
 
 public class _6_TrappingRainWater {
     static long trappingWater(int arr[], int n) {

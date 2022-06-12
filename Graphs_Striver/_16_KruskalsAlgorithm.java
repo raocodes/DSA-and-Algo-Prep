@@ -1,4 +1,4 @@
-package Graphs_Striver;
+package graphs_striver;
 
 import java.util.ArrayList;
 import java.util.Collections;

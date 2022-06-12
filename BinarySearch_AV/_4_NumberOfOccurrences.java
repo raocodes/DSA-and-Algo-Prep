@@ -1,4 +1,4 @@
-package BinarySearch_AV;
+package binarysearch_av;
 
 // https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1/
 public class _4_NumberOfOccurrences {

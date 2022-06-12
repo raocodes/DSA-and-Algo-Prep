@@ -1,4 +1,4 @@
-package Graphs_Striver;
+package graphs_striver;
 
 // Nodes start with 1 in this example
 public class _15_DisjointSet {
