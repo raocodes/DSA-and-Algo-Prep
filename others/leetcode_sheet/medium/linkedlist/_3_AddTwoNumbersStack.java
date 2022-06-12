@@ -1,24 +1,7 @@
-package others.leetcode_sheet.medium.linkedlist._3_AddTwoNumbersStack;
+package others.leetcode_sheet.medium.linkedlist;
 
 import java.util.Stack;
 import java.util.ArrayList;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
 
 public class _3_AddTwoNumbersStack {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {

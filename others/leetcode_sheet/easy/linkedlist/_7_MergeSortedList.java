@@ -1,21 +1,4 @@
-package others.leetcode_sheet.easy.linkedlist._7_MergeSortedList;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
+package others.leetcode_sheet.easy.linkedlist;
 
 public class _7_MergeSortedList {
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {

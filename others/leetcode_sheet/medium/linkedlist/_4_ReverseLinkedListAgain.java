@@ -1,21 +1,4 @@
-package others.leetcode_sheet.medium.linkedlist._4_ReverseLinkedListAgain;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
+package others.leetcode_sheet.medium.linkedlist;
 
 public class _4_ReverseLinkedListAgain {
     public ListNode reverseBetween(ListNode head, int left, int right) {

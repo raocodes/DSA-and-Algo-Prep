@@ -1,24 +1,7 @@
-package others.leetcode_sheet.easy.linkedlist._11_Palindrome;
+package others.leetcode_sheet.easy.linkedlist;
 
 import java.util.ArrayList;
 import java.util.List;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
 
 public class _11_Palindrome {
     public boolean isPalindrome(ListNode head) {

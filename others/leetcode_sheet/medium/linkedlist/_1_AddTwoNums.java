@@ -1,4 +1,4 @@
-package others.leetcode_sheet.medium.linkedlist._1_AddTwoNums;
+package others.leetcode_sheet.medium.linkedlist;
 
 class ListNode {
     int val;

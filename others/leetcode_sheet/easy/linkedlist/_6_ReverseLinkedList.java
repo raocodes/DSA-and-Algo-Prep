@@ -1,21 +1,4 @@
-package others.leetcode_sheet.easy.linkedlist._6_ReverseLinkedList;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
+package others.leetcode_sheet.easy.linkedlist;
 
 public class _6_ReverseLinkedList {
     public ListNode reverseList(ListNode head) {

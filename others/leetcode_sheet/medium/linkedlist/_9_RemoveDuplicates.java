@@ -1,21 +1,4 @@
-package others.leetcode_sheet.medium.linkedlist._9_RemoveDuplicates;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
+package others.leetcode_sheet.medium.linkedlist;
 
 public class _9_RemoveDuplicates {
     public ListNode deleteDuplicates(ListNode head) {

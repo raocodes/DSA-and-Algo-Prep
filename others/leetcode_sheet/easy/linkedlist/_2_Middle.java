@@ -1,24 +1,7 @@
-package others.leetcode_sheet.easy.linkedlist._2_Middle;
+package others.leetcode_sheet.easy.linkedlist;
 
 import java.util.List;
 import java.util.ArrayList;
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode() {
-    }
-
-    ListNode(int val) {
-        this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-        this.val = val;
-        this.next = next;
-    }
-}
 
 public class _2_Middle {
     public ListNode middleNode(ListNode head) {

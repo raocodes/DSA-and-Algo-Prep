@@ -1,4 +1,4 @@
-package others.leetcode_sheet.medium.linkedlist._2_CopyList;
+package others.leetcode_sheet.medium.linkedlist;
 
 import java.util.HashMap;
 
