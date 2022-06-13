@@ -5,7 +5,7 @@ class Stack {
     // We use static final because we want all stack objects to have only this value
     // If we used only final each object's constructor can assign it's value
     int top;
-    int[] arr = new int[Stack.MAX];
+    int[] arr = new int[MAX];
 
     boolean isEmpty() {
         if (top == -1) {
@@ -34,8 +34,7 @@ class Stack {
             System.out.println("Stack Underflow");
             return 0;
         } else {
-            int x = arr[top--];
-            return x;
+            return arr[top--];
         }
     }
 
@@ -49,6 +48,10 @@ class Stack {
     }
 
     void print() {
+        if (top == -1) {
+            System.out.println("Stack Underflow");
+            return;
+        }
         for (int i = top; i >= 0; i--) {
             System.out.print(arr[i] + "    ");
         }
