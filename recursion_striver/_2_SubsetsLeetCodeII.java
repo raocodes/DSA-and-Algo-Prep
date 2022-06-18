@@ -3,16 +3,15 @@ package recursion_striver;
 import java.util.List;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 
 // https://leetcode.com/problems/subsets-ii
 public class _2_SubsetsLeetCodeII {
-    public void findSubsequence(int index, List<Integer> sequence, int[] nums, List<List<Integer>> result) {
+    public void findSubsequence(int index, List<Integer> sequence, int[] nums, HashSet<List<Integer>> result) {
         if (index >= nums.length) {
             // Reached the end of the sequence
             Collections.sort(sequence);
-            if (!result.contains(sequence)) {
-                result.add(sequence);
-            }
+            result.add(sequence);
             return;
         }
 
@@ -27,9 +26,9 @@ public class _2_SubsetsLeetCodeII {
     }
 
     public List<List<Integer>> subsetsWithDup(int[] nums) {
-        List<List<Integer>> result = new ArrayList<>();
+        HashSet<List<Integer>> resultSet = new HashSet<>();
         List<Integer> sequence = new ArrayList<>();
-        findSubsequence(0, sequence, nums, result);
-        return result;
+        findSubsequence(0, sequence, nums, resultSet);
+        return new ArrayList<>(resultSet);
     }
 }
