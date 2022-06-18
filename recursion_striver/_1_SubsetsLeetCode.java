@@ -8,7 +8,7 @@ public class _1_SubsetsLeetCode {
     public void findSubsequence(int index, List<Integer> sequence, int[] nums, List<List<Integer>> result) {
         if (index >= nums.length) {
             // Reached the end of the sequence
-            result.add(sequence);
+            result.add(new ArrayList<>(sequence));
             return;
         }
 
@@ -17,9 +17,9 @@ public class _1_SubsetsLeetCode {
         // This would mean that all the elements in result
         // will have the same value as the last calculated result
         sequence.add(nums[index]);
-        findSubsequence(index + 1, new ArrayList<>(sequence), nums, result);
+        findSubsequence(index + 1, sequence, nums, result);
         sequence.remove(sequence.size() - 1);
-        findSubsequence(index + 1, new ArrayList<>(sequence), nums, result);
+        findSubsequence(index + 1, sequence, nums, result);
     }
 
     public List<List<Integer>> subsets(int[] nums) {
