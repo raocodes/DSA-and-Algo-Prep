@@ -19,13 +19,14 @@ public class _2_DetectCycle {
             return false;
 
         ListNode slow = head;
-        ListNode fast = head.next;
+        ListNode fast = head;
 
-        while (fast != null && fast.next != null) {
-            if (slow == fast)
-                return true;
+        while (fast.next != null && fast.next.next != null) {
+            // Otherwise slow == fast will be true so we first do travel
             slow = slow.next;
             fast = fast.next.next;
+            if (slow == fast)
+                return true;
         }
 
         return false;
