@@ -2,7 +2,7 @@ package striver_sheet.stacksandqueues_ii;
 
 import java.util.Stack;
 
-class stackEntry {
+class StackEntry {
     private int index;
     private int height;
 
@@ -14,7 +14,7 @@ class stackEntry {
         return height;
     }
 
-    stackEntry(int index, int height) {
+    StackEntry(int index, int height) {
         this.index = index;
         this.height = height;
     }
@@ -24,7 +24,7 @@ public class _4_MaximumAreaHistogram {
     public int largestRectangleArea(int[] heights) {
         // For this we need to find nearest smallest to both sides
 
-        Stack<stackEntry> stk = new Stack<>(); // We need to know the index
+        Stack<StackEntry> stk = new Stack<>(); // We need to know the index
         int[] smallestLeft = new int[heights.length];
         int[] smallestRight = new int[heights.length];
 
@@ -34,10 +34,10 @@ public class _4_MaximumAreaHistogram {
             }
             if (stk.isEmpty()) {
                 smallestLeft[i] = -1; // To the left we assign -1
-                stk.push(new stackEntry(i, heights[i]));
+                stk.push(new StackEntry(i, heights[i]));
             } else {
                 smallestLeft[i] = stk.peek().getIndex();
-                stk.push(new stackEntry(i, heights[i]));
+                stk.push(new StackEntry(i, heights[i]));
             }
         }
 
@@ -49,10 +49,10 @@ public class _4_MaximumAreaHistogram {
             }
             if (stk.isEmpty()) {
                 smallestRight[i] = heights.length; // To the right we assign length
-                stk.push(new stackEntry(i, heights[i]));
+                stk.push(new StackEntry(i, heights[i]));
             } else {
                 smallestRight[i] = stk.peek().getIndex();
-                stk.push(new stackEntry(i, heights[i]));
+                stk.push(new StackEntry(i, heights[i]));
             }
         }
 
