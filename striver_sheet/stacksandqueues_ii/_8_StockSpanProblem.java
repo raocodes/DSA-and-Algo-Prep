@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-class stackEntry {
+class StackEntryStock {
     private int index;
     private int value;
 
@@ -16,14 +16,14 @@ class stackEntry {
         return value;
     }
 
-    stackEntry(int index, int value) {
+    StackEntryStock(int index, int value) {
         this.index = index;
         this.value = value;
     }
 }
 
 public class _8_StockSpanProblem {
-    Stack<stackEntry> stk;
+    Stack<StackEntryStock> stk;
     List<Integer> elements;
 
     public _8_StockSpanProblem() {
@@ -37,7 +37,7 @@ public class _8_StockSpanProblem {
 
         if (stk.isEmpty()) {
             // First element in the StockSpanner object
-            stk.push(new stackEntry(elements.size() - 1, price));
+            stk.push(new StackEntryStock(elements.size() - 1, price));
             return 1;
         }
 
@@ -51,7 +51,7 @@ public class _8_StockSpanProblem {
             // elements.size() - 1 contains the index of the element we calculating for
             result = (elements.size() - 1) - stk.peek().getIndex();
         }
-        stk.push(new stackEntry(elements.size() - 1, price));
+        stk.push(new StackEntryStock(elements.size() - 1, price));
         return result;
     }
 }
