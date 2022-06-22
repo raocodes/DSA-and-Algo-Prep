@@ -3,6 +3,7 @@ package recursion_striver;
 import java.util.ArrayList;
 import java.util.List;
 
+// https://leetcode.com/problems/n-queens/
 public class _9_NQueens {
     public boolean isAllowed(char[][] board, int row, int column) {
         // We need to check only 3 directions
