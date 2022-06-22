@@ -1,5 +1,6 @@
 package recursion_striver;
 
+// https://leetcode.com/problems/sudoku-solver/
 public class _10_SudokuSolver {
     public boolean solve(char[][] board) {
         for (int i = 0; i < 9; i++) {
