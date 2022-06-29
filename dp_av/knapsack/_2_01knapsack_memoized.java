@@ -1,9 +1,9 @@
 package dp_av.knapsack;
 
+// https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1/
 public class _2_01knapsack_memoized {
     static int[][] dp;
 
-    // Function to return max value that can be put in knapsack of capacity W.
     static int knapSack(int W, int wt[], int val[], int n) {
         dp = new int[n][W + 1];
         for (int i = 0; i < n; i++) {
