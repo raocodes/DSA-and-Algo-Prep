@@ -1,5 +1,6 @@
 package dp_av.knapsack;
 
+// https://practice.geeksforgeeks.org/problems/perfect-sum-problem5633/1#
 public class _8_CountofSubsetsSumWithGivenSum_tabulation {
     public int perfectSum(int arr[], int n, int sum) {
         int[][] dp = new int[n + 1][sum + 1];
