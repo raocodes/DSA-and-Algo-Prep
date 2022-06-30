@@ -1,4 +1,4 @@
-package dp_av.knapsack;
+package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1/
 public class _1_01Knapsack_recursive {

@@ -1,4 +1,4 @@
-package dp_av.knapsack;
+package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1/
 public class _4_SubsetSum_recursive {

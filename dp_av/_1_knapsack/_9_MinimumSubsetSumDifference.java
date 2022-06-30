@@ -1,4 +1,4 @@
-package dp_av.knapsack;
+package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/minimum-sum-partition3317/1/#
 public class _9_MinimumSubsetSumDifference {

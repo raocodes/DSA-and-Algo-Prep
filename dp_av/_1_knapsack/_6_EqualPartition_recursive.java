@@ -1,4 +1,4 @@
-package dp_av.knapsack;
+package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/subset-sum-problem2014/1#
 public class _6_EqualPartition_recursive {

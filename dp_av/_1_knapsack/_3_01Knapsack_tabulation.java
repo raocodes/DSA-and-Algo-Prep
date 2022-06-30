@@ -1,4 +1,4 @@
-package dp_av.knapsack;
+package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1/
 public class _3_01Knapsack_tabulation {
