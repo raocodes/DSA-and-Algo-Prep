@@ -1,7 +1,7 @@
 package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/minimum-sum-partition3317/1/#
-public class _9_MinimumSubsetSumDifference {
+public class _5_MinimumSubsetSumDifference {
     public int minDifference(int arr[], int n) {
         int range = 0;
         for (int element : arr) {

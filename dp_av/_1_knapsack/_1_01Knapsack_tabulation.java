@@ -1,7 +1,7 @@
 package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/0-1-knapsack-problem0945/1/
-public class _3_01Knapsack_tabulation {
+public class _1_01Knapsack_tabulation {
     static int knapSack(int W, int wt[], int val[], int n) {
         int[][] dp = new int[n + 1][W + 1];
         // Initialising with base condition

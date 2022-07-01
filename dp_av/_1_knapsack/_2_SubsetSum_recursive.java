@@ -1,7 +1,7 @@
 package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/subset-sum-problem-1611555638/1/
-public class _4_SubsetSum_recursive {
+public class _2_SubsetSum_recursive {
     static Boolean isSubsetOrNot(int index, int arr[], int sum) {
         if (sum == 0)
             return true;

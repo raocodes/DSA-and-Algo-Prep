@@ -1,7 +1,7 @@
 package dp_av._1_knapsack;
 
 // https://practice.geeksforgeeks.org/problems/perfect-sum-problem5633/1#
-public class _8_CountofSubsetsSumWithGivenSum_recursive {
+public class _4_CountOfSubsetsWithGivenSum_recursive {
     public int perfectSubset(int index, int arr[], int sum) {
         if (sum == 0 && index == arr.length)
             return 1;
