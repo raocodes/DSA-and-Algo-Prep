@@ -24,6 +24,8 @@ hs_err_pid*
 
 # For MacOS
 .DS_Store
+# For Windows
+._.DS_Store
 
 # To get rid IntelliJ files
 .idea
