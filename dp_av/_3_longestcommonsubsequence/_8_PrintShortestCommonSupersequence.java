@@ -1,5 +1,6 @@
 package dp_av._3_longestcommonsubsequence;
 
+// https://leetcode.com/problems/shortest-common-supersequence/submissions/
 public class _8_PrintShortestCommonSupersequence {
     public String shortestCommonSupersequence(String str1, String str2) {
         int[][] dp = new int[str1.length() + 1][str2.length() + 1];
