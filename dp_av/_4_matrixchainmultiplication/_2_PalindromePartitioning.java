@@ -32,7 +32,13 @@ public class _2_PalindromePartitioning {
 
         int ans = Integer.MAX_VALUE;
         for (int k = i; k < j; k++) {
-            int temp = 1 + findMin(str, i, k) + findMin(str, k + 1, j);
+            int left = findMin(str, i, k);
+            dp[i][k] = left;
+
+            int right = findMin(str, k + 1, j);
+            dp[k + 1][j] = right;
+
+            int temp = 1 + left + right;
             ans = Math.min(ans, temp);
         }
 
