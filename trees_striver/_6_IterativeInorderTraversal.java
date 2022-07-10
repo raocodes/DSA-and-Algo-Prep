@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Stack;
 
 // https://leetcode.com/problems/binary-tree-inorder-traversal/
-public class _6_IterativeInorderTraversal {
+public class _6_IterativeInOrderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {
         if (root == null) {
             return new ArrayList<>();
