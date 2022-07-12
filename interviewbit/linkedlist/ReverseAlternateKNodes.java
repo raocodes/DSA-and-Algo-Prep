@@ -1,4 +1,4 @@
-package others.interviewbit.linkedlist;
+package interviewbit.linkedlist;
 
 public class ReverseAlternateKNodes {
     public ListNode solve(ListNode A, int B) {

@@ -1,4 +1,4 @@
-package others.interviewbit.linkedlist;
+package interviewbit.linkedlist;
 
 public class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode A, ListNode B) {
