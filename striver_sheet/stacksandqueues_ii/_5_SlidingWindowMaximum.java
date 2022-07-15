@@ -24,7 +24,7 @@ public class _5_SlidingWindowMaximum {
         // The queue contains index of the max value in the current bound
         for (int i = 0; i < nums.length; i++) {
             // We get rid of all queue values that are not in bounds
-            if (!queue.isEmpty() && queue.peekFirst() <= i - k) {
+            while (!queue.isEmpty() && queue.peekFirst() <= i - k) {
                 queue.pollFirst();
             }
 
