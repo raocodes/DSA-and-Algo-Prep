@@ -2,6 +2,7 @@ package sorting;
 
 public class SelectionSort {
     // O(n ^ 2)
+    // Unstable
 
     public static void main(String[] args) {
         int[] arr = new int[] { 6, 3, 9, 5, 2, 8 };
