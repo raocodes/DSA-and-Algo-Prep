@@ -6,8 +6,9 @@ public class QuickSort {
 
     // Worst case time complexity: O(n^2)
     // Unstable
-    // Worst case is when the pivot is the smallest or the largest element and it is sorted
-    // 1 2 3 4 5, then with pivot as 5 we have to do O(n^2)
+    // Worst case is when the pivot is the smallest or the largest element and it is
+    // sorted
+    // 1 2 3 4 5, then with pivot as 5 we have to do O(n)
 
     public static void swap(int[] arr, int i, int j) {
         int temp = arr[i];
