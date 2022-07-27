@@ -3,7 +3,7 @@ package trees_striver._16_BoundaryTraversal;
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class code {
+public class Code {
     public static boolean isLeaf(TreeNode node) {
         if (node.left == null && node.right == null) {
             return true;
