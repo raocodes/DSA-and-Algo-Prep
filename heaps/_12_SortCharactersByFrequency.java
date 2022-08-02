@@ -7,6 +7,16 @@ import java.util.Queue;
 
 // https://leetcode.com/problems/sort-characters-by-frequency/
 public class _12_SortCharactersByFrequency {
+    class QueueData {
+        int freq;
+        char val;
+
+        QueueData(int freq, char val) {
+            this.freq = freq;
+            this.val = val;
+        }
+    }
+
     public String frequencySort(String s) {
         Queue<QueueData> pq = new PriorityQueue<>((o1, o2) -> {
             return o2.freq - o1.freq;
@@ -32,15 +42,5 @@ public class _12_SortCharactersByFrequency {
         }
 
         return result.toString();
-    }
-}
-
-class QueueData {
-    int freq;
-    char val;
-
-    QueueData(int freq, char val) {
-        this.freq = freq;
-        this.val = val;
     }
 }
