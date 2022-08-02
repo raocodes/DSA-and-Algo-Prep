@@ -1,4 +1,4 @@
-package trees_striver._18_TopView;
+package trees_striver;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -6,9 +6,31 @@ import java.util.Map;
 import java.util.Queue;
 import java.util.TreeMap;
 
-// https://practice.geeksforgeeks.org/problems/top-view-of-binary-tree/1
-public class Code {
-    static ArrayList<Integer> topView(Node root) {
+// https://practice.geeksforgeeks.org/problems/bottom-view-of-binary-tree/1
+public class _19_BottomView {
+    class Node {
+        int data;
+        Node left;
+        Node right;
+
+        Node(int data) {
+            this.data = data;
+            left = null;
+            right = null;
+        }
+    }
+
+    class NodeObj {
+        Node node;
+        int vertical;
+
+        NodeObj(Node node, int vertical) {
+            this.node = node;
+            this.vertical = vertical;
+        }
+    }
+
+    public ArrayList<Integer> bottomView(Node root) {
         ArrayList<Integer> result = new ArrayList<>();
         Queue<NodeObj> queue = new LinkedList<>();
         TreeMap<Integer, Integer> map = new TreeMap<>();
@@ -19,9 +41,7 @@ public class Code {
             int vertical = nodeobj.vertical;
             Node node = nodeobj.node;
 
-            if (!map.containsKey(vertical)) {
-                map.put(vertical, node.data);
-            }
+            map.put(vertical, node.data);
 
             if (node.left != null) {
                 queue.add(new NodeObj(node.left, vertical - 1));
@@ -39,4 +59,3 @@ public class Code {
         return result;
     }
 }
-

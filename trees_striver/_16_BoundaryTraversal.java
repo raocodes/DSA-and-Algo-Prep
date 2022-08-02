@@ -1,9 +1,21 @@
-package trees_striver._16_BoundaryTraversal;
+package trees_striver;
 
 import java.util.ArrayList;
 import java.util.Stack;
 
-public class Code {
+public class _16_BoundaryTraversal {
+    public class TreeNode {
+        int data;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
+    }
+
     public static boolean isLeaf(TreeNode node) {
         if (node.left == null && node.right == null) {
             return true;
