@@ -6,17 +6,17 @@ import java.util.List;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-class QueueData {
-    int diff;
-    int val;
-
-    QueueData(int diff, int val) {
-        this.diff = diff;
-        this.val = val;
-    }
-}
-
 public class _9_KClosedNumbers {
+    class QueueData {
+        int diff;
+        int val;
+
+        QueueData(int diff, int val) {
+            this.diff = diff;
+            this.val = val;
+        }
+    }
+
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
         Queue<QueueData> pq = new PriorityQueue<>((o1, o2) -> {
             if (o1.diff == o2.diff) {
