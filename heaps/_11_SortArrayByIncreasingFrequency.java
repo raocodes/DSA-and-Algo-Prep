@@ -7,6 +7,16 @@ import java.util.Queue;
 
 // https://leetcode.com/problems/sort-array-by-increasing-frequency/
 public class _11_SortArrayByIncreasingFrequency {
+    class QueueData {
+        int freq;
+        int val;
+
+        QueueData(int freq, int val) {
+            this.freq = freq;
+            this.val = val;
+        }
+    }
+
     public int[] frequencySort(int[] nums) {
         Queue<QueueData> pq = new PriorityQueue<>((o1, o2) -> {
             if (o1.freq == o2.freq) {
@@ -35,15 +45,5 @@ public class _11_SortArrayByIncreasingFrequency {
         }
 
         return nums;
-    }
-}
-
-class QueueData {
-    int freq;
-    int val;
-
-    QueueData(int freq, int val) {
-        this.freq = freq;
-        this.val = val;
     }
 }
