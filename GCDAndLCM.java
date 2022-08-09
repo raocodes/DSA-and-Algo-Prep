@@ -1,4 +1,4 @@
-public class GcdLcm {
+public class GCDAndLCM {
     static long gcd(long big, long small) {
         if (small == 0) {
             return big;
