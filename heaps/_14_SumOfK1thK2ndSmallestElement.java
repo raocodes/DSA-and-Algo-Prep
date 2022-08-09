@@ -6,8 +6,8 @@ import java.util.Queue;
 // https://practice.geeksforgeeks.org/problems/sum-of-elements-between-k1th-and-k2th-smallest-elements3133/1
 public class _14_SumOfK1thK2ndSmallestElement {
     public static long sumBetweenTwoKth(long A[], long N, long K1, long K2) {
-        Queue<Long> pq1 = new PriorityQueue<>((o1, o2) -> new Long(o2).intValue() - new Long(o1).intValue());
-        Queue<Long> pq2 = new PriorityQueue<>((o1, o2) -> new Long(o2).intValue() - new Long(o1).intValue());
+        Queue<Long> pq1 = new PriorityQueue<>((o1, o2) -> Long.valueOf(o2).intValue() - Long.valueOf(o1).intValue());
+        Queue<Long> pq2 = new PriorityQueue<>((o1, o2) -> Long.valueOf(o2).intValue() - Long.valueOf(o1).intValue());
 
         for (long num : A) {
             pq1.offer(num);
