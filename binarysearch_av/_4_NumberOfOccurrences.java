@@ -2,41 +2,47 @@ package binarysearch_av;
 
 // https://practice.geeksforgeeks.org/problems/number-of-occurrence2259/1/
 public class _4_NumberOfOccurrences {
-    int count(int arr[], int n, int x) {
-        int ogstart = 0;
-        int ogend = n - 1;
-        int resleft = -1;
-        int resright = -1;
+    int count(int[] arr, int n, int x) {
+        int start = 0;
+        int end = n - 1;
+        int first = -1;
+        int found = -1;
 
-        int mid = ogstart + ((ogend - ogstart) / 2);
-        if (x < arr[mid]) {
-            ogend = mid - 1;
-        } else if (x > arr[mid]) {
-            ogstart = mid + 1;
-        }
-
-        // First occurrence
-        int start = ogstart;
-        int end = ogend;
+        // First occurence
         while (start <= end) {
-            mid = start + ((end - start) / 2);
+            int mid = start + ((end - start) / 2);
             if (arr[mid] == x) {
-                resleft = mid;
+                // After we search we change end to before
+                // We are searching in the left section in case another x is there
+                // That could be the first occurence
+                if (found == -1) {
+                    found = mid;
+                }
+                first = mid;
                 end = mid - 1;
             } else if (x < arr[mid]) {
                 end = mid - 1;
             } else {
                 start = mid + 1;
             }
+        }
+
+        if (first == -1) {
+            // We did not find the element
+            return 0;
         }
 
         // Last occurrence
-        start = ogstart;
-        end = ogend;
+        int last = found;
+        start = found + 1;
+        end = n - 1;
         while (start <= end) {
-            mid = start + ((end - start) / 2);
+            int mid = start + ((end - start) / 2);
             if (arr[mid] == x) {
-                resright = mid;
+                // After we search we change start to after
+                // We are searching in the right section in case another x is there
+                // That could be the last occurence
+                last = mid;
                 start = mid + 1;
             } else if (x < arr[mid]) {
                 end = mid - 1;
@@ -45,12 +51,6 @@ public class _4_NumberOfOccurrences {
             }
         }
 
-        if (resleft == -1 && resright == -1) {
-            return 0;
-        } else if (resleft == -1 || resright == -1) {
-            return 1;
-        } else {
-            return resright - resleft + 1;
-        }
+        return last - first + 1;
     }
 }
