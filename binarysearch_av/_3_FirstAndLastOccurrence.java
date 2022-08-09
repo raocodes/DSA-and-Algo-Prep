@@ -5,26 +5,23 @@ import java.util.ArrayList;
 // https://practice.geeksforgeeks.org/problems/first-and-last-occurrences-of-x2041/1/#
 public class _3_FirstAndLastOccurrence {
     public ArrayList<Integer> firstAndLast(int arr[], int n, int x) {
-        int ogstart = 0;
-        int ogend = n - 1;
+        int start = 0;
+        int end = n - 1;
         int res = -1;
+        int found = -1;
 
         ArrayList<Integer> result = new ArrayList<>();
 
-        int mid = ogstart + ((ogend - ogstart) / 2);
-        if (arr[mid] == x) res = mid;
-        else if (x < arr[mid]) {
-            ogend = mid - 1;
-        } else {
-            ogstart = mid + 1;
-        }
-
-        // First occurrence
-        int start = ogstart;
-        int end = ogend;
+        // First occurence
         while (start <= end) {
-            mid = start + ((end - start) / 2);
+            int mid = start + ((end - start) / 2);
             if (arr[mid] == x) {
+                // After we search we change end to before
+                // We are searching in the left section in case another x is there
+                // That could be the first occurence
+                if (found == -1) {
+                    found = mid;
+                }
                 res = mid;
                 end = mid - 1;
             } else if (x < arr[mid]) {
@@ -33,15 +30,22 @@ public class _3_FirstAndLastOccurrence {
                 start = mid + 1;
             }
         }
-        result.add(res);
+        result.add(res); // Adding first occurence
+
+        if (res == -1) {
+            return result;
+        }
 
         // Last occurrence
-        res = -1;
-        start = ogstart;
-        end = ogend;
+        res = found;
+        start = found + 1;
+        end = n - 1;
         while (start <= end) {
-            mid = start + ((end - start) / 2);
+            int mid = start + ((end - start) / 2);
             if (arr[mid] == x) {
+                // After we search we change start to after
+                // We are searching in the right section in case another x is there
+                // That could be the last occurence
                 res = mid;
                 start = mid + 1;
             } else if (x < arr[mid]) {
@@ -50,17 +54,7 @@ public class _3_FirstAndLastOccurrence {
                 start = mid + 1;
             }
         }
-
-        if (res == -1 && result.get(0) == -1) {
-            return result;
-        } else if (result.get(0) == -1 && res != -1) {
-            result.set(0, res);
-            result.add(res);
-        } else if (result.get(0) != -1 && res == -1) {
-            result.add(result.get(0));
-        } else {
-            result.add(res);
-        }
+        result.add(res); // Adding last occurence
 
         return result;
     }
