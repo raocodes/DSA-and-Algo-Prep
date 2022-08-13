@@ -4,7 +4,7 @@ public class BubbleSort {
     // O(n ^ 2)
 
     public static void main(String[] args) {
-        int[] arr = new int[] { 6, 3, 9, 5, 2, 8 };
+        int[] arr = new int[]{6, 3, 9, 5, 2, 8};
 
         for (int i = 0; i < arr.length - 1; i++) {
             // arr.length - 1 because when there is one element left no need to sort

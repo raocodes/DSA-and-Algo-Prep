@@ -8,19 +8,20 @@ import java.util.Queue;
 import java.util.TreeMap;
 import java.util.Map;
 
-class NodeObj {
-    TreeNode node;
-    int level;
-    int vertical;
-
-    NodeObj(TreeNode node, int level, int vertical) {
-        this.node = node;
-        this.level = level;
-        this.vertical = vertical;
-    }
-}
 
 public class _17_VerticalOrderTraversal {
+    class NodeObj {
+        TreeNode node;
+        int level;
+        int vertical;
+
+        NodeObj(TreeNode node, int level, int vertical) {
+            this.node = node;
+            this.level = level;
+            this.vertical = vertical;
+        }
+    }
+
     public List<List<Integer>> verticalTraversal(TreeNode root) {
         TreeMap<Integer, TreeMap<Integer, PriorityQueue<Integer>>> map = new TreeMap<>();
         Queue<NodeObj> queue = new LinkedList<>();

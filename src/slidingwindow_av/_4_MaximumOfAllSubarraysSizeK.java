@@ -17,7 +17,7 @@ public class _4_MaximumOfAllSubarraysSizeK {
                 dq.pollLast();
             }
 
-            dq.offerLast(new int[] { A[currindex], currindex });
+            dq.offerLast(new int[]{A[currindex], currindex});
             if (currindex >= B - 1) {
                 result[currindex - B + 1] = dq.peekFirst()[0];
             }

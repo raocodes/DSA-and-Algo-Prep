@@ -27,7 +27,7 @@ public class _36_KthSmallestInBST {
         // Naive approach would be to store the entire traversal to the list
         // Sort it and take the smallest
 
-        int[] counter = new int[] { 0 };
+        int[] counter = new int[]{0};
         return inorderTraversal(root, counter, k);
     }
 }

@@ -21,7 +21,7 @@ public class _3_StockSpanProblem {
                 } else
                     result[i] = i - stk.peek()[1];
             }
-            stk.push(new Integer[] { price[i], i });
+            stk.push(new Integer[]{price[i], i});
         }
         return result;
     }

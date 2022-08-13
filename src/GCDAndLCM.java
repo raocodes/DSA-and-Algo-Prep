@@ -15,6 +15,6 @@ public class GCDAndLCM {
         long small = A < B ? A : B;
         long gcdres = gcd(big, small);
         long lcmres = lcm(big, small, gcdres);
-        return new Long[] { lcmres, gcdres };
+        return new Long[]{lcmres, gcdres};
     }
 }

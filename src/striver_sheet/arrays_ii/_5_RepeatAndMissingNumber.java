@@ -25,6 +25,6 @@ public class _5_RepeatAndMissingNumber {
             }
         }
 
-        return new int[] { duplicate, nofound };
+        return new int[]{duplicate, nofound};
     }
 }

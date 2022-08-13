@@ -4,18 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-class Pair {
-    BinaryTreeNode<Integer> node;
-    int num;
-
-    Pair(BinaryTreeNode<Integer> node, int num) {
-        this.node = node;
-        this.num = num;
-    }
-}
-
 // https://www.codingninjas.com/codestudio/problems/981269?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website&leftPanelTab=0
 public class _9_AllInOneTraversal {
+    static class Pair {
+        BinaryTreeNode<Integer> node;
+        int num;
+
+        Pair(BinaryTreeNode<Integer> node, int num) {
+            this.node = node;
+            this.num = num;
+        }
+    }
+
     public static List<List<Integer>> getTreeTraversal(BinaryTreeNode<Integer> root) {
         if (root == null) {
             return new ArrayList<>();

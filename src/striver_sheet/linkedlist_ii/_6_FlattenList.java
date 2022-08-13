@@ -1,6 +1,18 @@
 package striver_sheet.linkedlist_ii;
 
 public class _6_FlattenList {
+    class Node {
+        int data;
+        Node next;
+        Node bottom;
+
+        Node(int d) {
+            data = d;
+            next = null;
+            bottom = null;
+        }
+    }
+
     Node flatten(Node root) {
         Node l1 = root;
         Node l2 = root.next;

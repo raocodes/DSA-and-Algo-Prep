@@ -21,7 +21,7 @@ public class _7_MinStackWithExtraSpace {
     }
 
     public int min(Stack<Integer> s) {
-        if (ss.isEmpty()){
+        if (ss.isEmpty()) {
             return -1;
         } else {
             return ss.peek();

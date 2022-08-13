@@ -5,7 +5,7 @@ import java.util.ArrayList;
 // https://www.codingninjas.com/codestudio/problems/983635?topList=striver-sde-sheet-problems&utm_source=striver&utm_medium=website
 public class _6_WordBreak {
     public static void findSentences(int index, String s, ArrayList<String> dictionary, ArrayList<String> sentence,
-            ArrayList<String> result) {
+                                     ArrayList<String> result) {
         if (index == s.length()) {
             // Reached the end
             result.add(String.join(" ", sentence));

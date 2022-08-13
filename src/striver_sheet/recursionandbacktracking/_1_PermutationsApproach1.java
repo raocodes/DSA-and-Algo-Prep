@@ -6,7 +6,7 @@ import java.util.List;
 // https://leetcode.com/problems/permutations
 public class _1_PermutationsApproach1 {
     public void generatePermutations(int index, int[] nums, List<Integer> sequence, boolean[] visited,
-            List<List<Integer>> result) {
+                                     List<List<Integer>> result) {
         if (index == nums.length) {
             // Reached the end of a sequence
             result.add(new ArrayList<>(sequence));

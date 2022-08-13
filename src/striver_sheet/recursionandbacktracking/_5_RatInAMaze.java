@@ -5,7 +5,7 @@ import java.util.ArrayList;
 // https://practice.geeksforgeeks.org/problems/rat-in-a-maze-problem/1#
 public class _5_RatInAMaze {
     public static void solve(int i, int j, int[][] maze, int size, boolean[][] visited, String path,
-            ArrayList<String> result) {
+                             ArrayList<String> result) {
         // If we have reached the final element then we have to add path
         if (i == size - 1 && j == size - 1) {
             result.add(path);

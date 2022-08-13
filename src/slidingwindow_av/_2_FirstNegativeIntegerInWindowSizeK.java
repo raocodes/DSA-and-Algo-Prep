@@ -15,7 +15,7 @@ public class _2_FirstNegativeIntegerInWindowSizeK {
             }
 
             if (A[i] < 0)
-                dq.offerLast(new long[] { A[i], i });
+                dq.offerLast(new long[]{A[i], i});
 
             if (i >= K - 1) {
                 if (dq.isEmpty()) {

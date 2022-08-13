@@ -3,7 +3,7 @@ package trees_striver;
 // https://leetcode.com/problems/binary-tree-maximum-path-sum/
 public class _13_MaximumPathSum {
     public int maxPathSum(TreeNode root) {
-        int[] max = new int[] { Integer.MIN_VALUE };
+        int[] max = new int[]{Integer.MIN_VALUE};
         findSum(root, max);
         return max[0];
     }

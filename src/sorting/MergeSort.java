@@ -28,7 +28,7 @@ public class MergeSort {
             merged[indexmerged++] = arr[indextwo++];
         }
 
-        for(int i = 0, j = start; i < merged.length; i++, j++){
+        for (int i = 0, j = start; i < merged.length; i++, j++) {
             arr[j] = merged[i];
         }
     }
@@ -45,10 +45,10 @@ public class MergeSort {
     }
 
     public static void main(String[] args) {
-        int[] arr = new int[] { 6, 3, 9, 5, 2, 8 };
+        int[] arr = new int[]{6, 3, 9, 5, 2, 8};
         int n = arr.length;
         divide(arr, 0, n - 1);
-        for(int num : arr){
+        for (int num : arr) {
             System.out.print(num + " ");
         }
         System.out.println();

@@ -24,7 +24,7 @@ public class _4_MaximumAreaHistogram {
                     nsr[i] = stk.peek()[1];
                 }
             }
-            stk.push(new Long[] { hist[i], (long) i });
+            stk.push(new Long[]{hist[i], (long) i});
         }
 
         stk.clear(); // Clearing stack before NSL
@@ -43,7 +43,7 @@ public class _4_MaximumAreaHistogram {
                     nsl[i] = stk.peek()[1];
                 }
             }
-            stk.push(new Long[] { hist[i], (long) i });
+            stk.push(new Long[]{hist[i], (long) i});
         }
 
         // Width

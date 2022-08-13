@@ -6,7 +6,7 @@ import java.util.List;
 // https://leetcode.com/problems/combination-sum/
 public class _3_CombinationSum {
     public void findCombinations(int index, int target, int[] candidates, List<Integer> sequence,
-            List<List<Integer>> result) {
+                                 List<List<Integer>> result) {
         if (target == 0) {
             // Then the sum of the sequence is target
             result.add(new ArrayList<>(sequence));

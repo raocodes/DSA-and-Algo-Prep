@@ -41,7 +41,7 @@ public class _7_PartitionLabels {
             if (map.containsKey(s.charAt(i))) {
                 map.get(s.charAt(i))[1] = i;
             } else {
-                map.put(s.charAt(i), new int[] { i, -1 });
+                map.put(s.charAt(i), new int[]{i, -1});
             }
         }
 

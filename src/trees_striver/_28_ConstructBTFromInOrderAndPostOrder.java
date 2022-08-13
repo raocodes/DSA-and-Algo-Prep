@@ -17,7 +17,7 @@ public class _28_ConstructBTFromInOrderAndPostOrder {
     }
 
     public TreeNode create(int[] postorder, int postStart, int postEnd, int[] inorder, int inStart, int inEnd,
-            Map<Integer, Integer> inMap) {
+                           Map<Integer, Integer> inMap) {
 
         if (postStart > postEnd || inStart > inEnd) {
             return null; // No more elements left

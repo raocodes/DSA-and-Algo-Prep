@@ -76,7 +76,7 @@ public class _9_NQueens {
     }
 
     public void solveEfficient(int column, char[][] board, List<List<String>> result, boolean[] lowerDiagonal,
-            boolean[] upperDiagonal, boolean[] left) {
+                               boolean[] upperDiagonal, boolean[] left) {
         if (column == board.length) {
             // We need to add the current layout into the result
             List<String> toadd = new ArrayList<>();

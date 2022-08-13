@@ -7,7 +7,7 @@ import java.util.List;
 // https://leetcode.com/problems/combination-sum-ii/
 public class _4_CombinationSumII {
     public void findCombinations(int index, int[] candidates, int target, List<Integer> sequence,
-            List<List<Integer>> result) {
+                                 List<List<Integer>> result) {
         if (target == 0) {
             result.add(new ArrayList<>(sequence));
             return;

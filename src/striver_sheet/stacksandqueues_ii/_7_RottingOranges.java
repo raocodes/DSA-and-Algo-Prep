@@ -45,8 +45,8 @@ public class _7_RottingOranges {
         // If in one of the directions has a node we consider it rotten then add to the
         // queue
 
-        int[] xdirection = new int[] { 0, 0, 1, -1 };
-        int[] ydirection = new int[] { 1, -1, 0, 0 };
+        int[] xdirection = new int[]{0, 0, 1, -1};
+        int[] ydirection = new int[]{1, -1, 0, 0};
 
         int days = 0;
         int totalvisited = 0;

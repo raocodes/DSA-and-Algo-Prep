@@ -43,7 +43,7 @@ public class _5_MaximumAreaRectangleBinaryMatrix {
                     nsr[i] = stk.peek()[1];
                 }
             }
-            stk.push(new int[] { hist[i], (int) i });
+            stk.push(new int[]{hist[i], (int) i});
         }
 
         stk.clear(); // Clearing stack before NSL
@@ -62,7 +62,7 @@ public class _5_MaximumAreaRectangleBinaryMatrix {
                     nsl[i] = stk.peek()[1];
                 }
             }
-            stk.push(new int[] { hist[i], (int) i });
+            stk.push(new int[]{hist[i], (int) i});
         }
 
         // Width

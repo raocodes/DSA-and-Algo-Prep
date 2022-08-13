@@ -40,6 +40,6 @@ public class _3_JobSequencingProblem {
             }
         }
 
-        return new int[] { jobnum, profit };
+        return new int[]{jobnum, profit};
     }
 }

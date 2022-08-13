@@ -17,7 +17,7 @@ public class _39_ConstructBSTFromPreOrder {
     }
 
     public TreeNode bstFromPreorder(int[] preorder) {
-        int[] index = new int[] { 0 };
+        int[] index = new int[]{0};
         return create(preorder, index, Integer.MAX_VALUE);
     }
 }

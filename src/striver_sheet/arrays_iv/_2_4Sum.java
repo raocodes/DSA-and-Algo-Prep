@@ -27,7 +27,7 @@ public class _2_4Sum {
                     long sum = numlow + numhigh;
                     if (sum == targettocheck) {
                         // Found the value
-                        result.add(Arrays.asList(new Integer[] { nums[i], nums[j], nums[low], nums[high] }));
+                        result.add(Arrays.asList(new Integer[]{nums[i], nums[j], nums[low], nums[high]}));
                         int temp = nums[low];
                         while (low < nums.length && temp == nums[low])
                             low++;

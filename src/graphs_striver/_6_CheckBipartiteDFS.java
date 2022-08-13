@@ -43,7 +43,7 @@ public class _6_CheckBipartiteDFS {
         for (int i = 0; i <= n; i++) {
             adj.add(new ArrayList<>());
         }
-        
+
         adj.get(1).add(2);
 
         adj.get(2).add(1);

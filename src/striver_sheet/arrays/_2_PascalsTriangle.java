@@ -8,7 +8,7 @@ import java.util.List;
 public class _2_PascalsTriangle {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList<>();
-        result.add(new ArrayList<Integer>(Arrays.asList(new Integer[] { 1 })));
+        result.add(new ArrayList<Integer>(Arrays.asList(new Integer[]{1})));
         for (int i = 1; i < numRows; i++) {
             List<Integer> row = new ArrayList<>();
             row.add(1);

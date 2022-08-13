@@ -3,17 +3,18 @@ package trees_striver;
 import java.util.LinkedList;
 import java.util.Queue;
 
-class QueueObj {
-    TreeNode node;
-    int index;
-
-    QueueObj(TreeNode node, int index) {
-        this.node = node;
-        this.index = index;
-    }
-}
 
 public class _24_MaximumWidthOfBT {
+    class QueueObj {
+        TreeNode node;
+        int index;
+
+        QueueObj(TreeNode node, int index) {
+            this.node = node;
+            this.index = index;
+        }
+    }
+
     public int widthOfBinaryTree(TreeNode root) {
         if (root == null) {
             return 0;

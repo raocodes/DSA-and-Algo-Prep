@@ -5,7 +5,7 @@ import java.util.List;
 
 public class _17_FindingBridges {
     public static void dfs(int node, int parent, boolean[] vis, int[] tin, int[] tlow, List<List<Integer>> adj,
-            int counter) {
+                           int counter) {
         vis[node] = true;
         tin[node] = tlow[node] = counter++;
 
