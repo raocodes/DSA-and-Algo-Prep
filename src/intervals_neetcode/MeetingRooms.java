@@ -1,4 +1,4 @@
-package intervals_TODO;
+package intervals_neetcode;
 
 import java.util.ArrayList;
 import java.util.Collections;
