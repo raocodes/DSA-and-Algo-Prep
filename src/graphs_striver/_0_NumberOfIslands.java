@@ -1,5 +1,6 @@
 package graphs_striver;
 
+// https://leetcode.com/problems/number-of-islands/
 public class _0_NumberOfIslands {
     public void dfs(int i, int j, char[][] grid) {
         if (i < 0 || i >= grid.length || j < 0 || j >= grid[0].length || grid[i][j] == '0') {
