@@ -27,7 +27,7 @@ public class ExpressiveWords {
             int strcount = counti - i;
             int wrdcount = countj - j;
 
-            if (strcount < wrdcount || (strcount > wrdcount && strcount < 3)) {
+            if (strcount < wrdcount || (strcount != wrdcount && strcount < 3)) {
                 // If string has a smaller count or strcount has a count lesser than 3
                 return false;
             }
