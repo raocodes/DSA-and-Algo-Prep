@@ -13,7 +13,7 @@ public class WordBreak {
         }
 
         if (dp[left][right] != -1) {
-            return dp[left][right] == 0 ? false : true;
+            return dp[left][right] == 1;
         }
 
         if (wordDict.contains(s.substring(left, right + 1))) {
