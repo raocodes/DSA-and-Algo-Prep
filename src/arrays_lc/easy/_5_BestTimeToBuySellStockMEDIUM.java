@@ -27,17 +27,10 @@ public class _5_BestTimeToBuySellStockMEDIUM {
     }
 
     public int maxProfit(int[] prices) {
-        dp = new int[prices.length + 1][2];
-
-        dp[prices.length][1] = 0;
-        dp[prices.length][0] = 0;
-
-        for (int i = prices.length - 1; i >= 0; i--)
-
-
-            for (int[] row : dp) {
-                Arrays.fill(row, -1);
-            }
+        dp = new int[prices.length][2];
+        for (int[] row : dp) {
+            Arrays.fill(row, -1);
+        }
 
         // Buy = 1
         // Sell = 0
