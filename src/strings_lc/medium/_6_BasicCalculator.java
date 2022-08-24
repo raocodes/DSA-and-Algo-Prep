@@ -21,36 +21,29 @@ public class _6_BasicCalculator {
             }
 
             if (!isOperatorOrSpace(s.charAt(i))) {
-                int oldi = i;
                 int temp = i + 1;
                 while (temp < s.length() && !isOperatorOrSpace(s.charAt(temp))) {
                     temp++;
-                    i++;
                 }
 
-                stk.push(Integer.valueOf(s.substring(oldi, temp)));
+                int num = Integer.parseInt(s.substring(i, temp));
+                i = temp - 1;
 
                 if (op == '*') {
                     int op1 = stk.pop();
-                    int op2 = stk.pop();
-                    stk.push(op2 * op1);
-                }
-
-                if (op == '/') {
+                    stk.push(op1 * num);
+                } else if (op == '/') {
                     int op1 = stk.pop();
-                    int op2 = stk.pop();
-                    stk.push(op2 / op1);
-                }
-
-                if (op == '-') {
-                    stk.push(-stk.pop());
+                    stk.push(op1 / num);
+                } else if (op == '-') {
+                    stk.push(-num);
+                } else {
+                    stk.push(num);
                 }
 
             } else {
                 op = s.charAt(i);
             }
-
-
         }
 
         int sum = 0;
