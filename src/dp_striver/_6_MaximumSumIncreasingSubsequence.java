@@ -6,8 +6,8 @@ import java.util.Arrays;
 public class _6_MaximumSumIncreasingSubsequence {
     int[][] dp;
 
-    public int findLIS(int index, int prev, int[] arr) {
-        if (index == arr.length) {
+    public int find(int[] arr, int index, int prev, int n) {
+        if (index == n) {
             return 0;
         }
 
@@ -16,20 +16,18 @@ public class _6_MaximumSumIncreasingSubsequence {
         }
 
         if (prev == -1 || arr[index] > arr[prev]) {
-            // Max between choosing and not choosing
-            int chose = dp[index + 1][index + 1] = findLIS(index + 1, index, arr);
-            int nochose = dp[index + 1][prev + 1] = findLIS(index + 1, prev, arr);
-            return dp[index][prev + 1] = Math.max(arr[index] + chose, nochose);
+            return dp[index][prev + 1] = Math.max(arr[index] + find(arr, index + 1, index, n),
+                    find(arr, index + 1, prev, n));
         } else {
-            return dp[index][prev + 1] = findLIS(index + 1, prev, arr);
+            return dp[index][prev + 1] = find(arr, index + 1, prev, n);
         }
     }
 
     public int maxSumIS(int arr[], int n) {
-        dp = new int[arr.length + 1][arr.length + 1];
+        dp = new int[n][n + 1];
         for (int[] row : dp) {
             Arrays.fill(row, -1);
         }
-        return findLIS(0, -1, arr);
+        return find(arr, 0, -1, n);
     }
 }
