@@ -2,7 +2,7 @@ package dp_av._3_longestcommonsubsequence;
 
 import java.util.Arrays;
 
-// https://practice.geeksforgeeks.org/problems/longest-common-subsequence-1587115620/1#
+// https://practice.geeksforgeeks.org/problems/longest-common-substring1452/1
 public class _2_LongestCommonSubstring_memoized {
     int[][] dp;
 
