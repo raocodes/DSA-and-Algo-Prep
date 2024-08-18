@@ -1,5 +1,8 @@
 package neetcode_150.arrays_and_hashing;
 
+import java.util.Map;
+import java.util.HashMap;
+
 public class _3_TwoSum {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> valueIndexMap = new HashMap<>();
